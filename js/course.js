@@ -7,6 +7,7 @@ $(document).ready(function(){
         $("#data03").html('<tr><td class="group01">'+data[2].id+'</td><td class="group02">'+data[2].name+'</td></tr>');
         $("#data04").html('<tr><td class="group01">'+data[3].id+'</td><td class="group02">'+data[3].name+'</td></tr>');
     });
+    $("li.pageli01").addClass("active");
 });
 $("a.page01").click(function(){
       $.get("http://demo6370041.mockable.io/getcourses", function(data, status){
@@ -17,6 +18,8 @@ $("a.page01").click(function(){
         $("#data03").html('<tr><td class="group01">'+data[2].id+'</td><td class="group02">'+data[2].name+'</td></tr>');
         $("#data04").html('<tr><td class="group01">'+data[3].id+'</td><td class="group02">'+data[3].name+'</td></tr>');
     });
+    $("li.pageli01").addClass("active");
+    $("li.pageli02").removeClass("active");
 });
 $("a.page02").click(function(){
     $.get("http://demo6370041.mockable.io/getcourses", function(data, status){
@@ -27,4 +30,6 @@ $("a.page02").click(function(){
       $("#data03").html('<tr><td class="group01">'+data[6].id+'</td><td class="group02">'+data[6].name+'</td></tr>');
       $("#data04").html('<tr><td class="group01">'+data[7].id+'</td><td class="group02">'+data[7].name+'</td></tr>');
   });
+  $("li.pageli02").addClass("active");
+  $("li.pageli01").removeClass("active");
 });
